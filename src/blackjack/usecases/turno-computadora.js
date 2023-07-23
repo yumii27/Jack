@@ -31,10 +31,10 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
 
     setTimeout(() => {
         if( puntosComputadora === puntosMinimos ) {
-            alert('Nadie gana :(');
-        } else if ( puntosMinimos > 21 ) {
-            alert('Computadora gana')
-        } else if( puntosComputadora > 21 ) {
+            alert('Empate!'); //edit: Yumii
+        } else if ( puntosMinimos > 21 || (puntosJugador < puntosComputadora && puntosComputadora <= 21)) {
+            alert('Computadora gana') //edit: Yumii
+        } else if( puntosComputadora > 21 || (puntosMinimos > puntosComputadora && puntosJugador <= 21)) {
             alert('Jugador Gana');
         } else {
             alert('Computadora Gana')
